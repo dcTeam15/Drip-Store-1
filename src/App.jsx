@@ -19,7 +19,6 @@ const App = () => {
 
   return (
     <>
-<<<<<<< HEAD
       <AuthContext.Provider value={{isLoggeg, setIsLoggeg}}>
         <Ways />
       </AuthContext.Provider>
@@ -28,11 +27,3 @@ const App = () => {
 }
 
 export default App
-=======
-      <LoginContext.Provider value={{logado, setLogado}} >
-        <Ways />
-      </LoginContext.Provider>
-    </>
-  );
-};
->>>>>>> 22a33ff2a784eda013264ac1d4e1ffce3af759eb
