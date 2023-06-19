@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "digital-store",
+=======
+  "name": "drip-store",
+>>>>>>> 22a33ff2a784eda013264ac1d4e1ffce3af759eb
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,11 +18,17 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.1",
+<<<<<<< HEAD
     "axios": "^1.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.2",
     "styled-components": "^5.3.11"
+=======
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.11.2"
+>>>>>>> 22a33ff2a784eda013264ac1d4e1ffce3af759eb
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

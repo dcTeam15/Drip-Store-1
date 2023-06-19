@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import './index.css'
 
 const Footer = () => {
@@ -44,6 +45,29 @@ const Footer = () => {
     </footer>
     </>
   )
+=======
+import logo from "./logo.png"
+
+const Footer = () => {
+  return (
+    <>
+      <footer>
+     <div className="container">
+      <div className="item">
+       <img src="{logo}" alt="logo"/>
+      </div>
+     </div>
+
+
+      </footer>
+
+
+    </>
+
+
+
+  );
+>>>>>>> 22a33ff2a784eda013264ac1d4e1ffce3af759eb
 }
 
 export default Footer;
