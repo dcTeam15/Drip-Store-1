@@ -1,23 +1,33 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home } from "../pages/Home";
-import { Login } from "../pages/Login";
-import { NotFound } from "../pages/NotFound";
+import PageHome from "../pages/PageHome";
+import PageLogin from "../pages/PageLogin";
+import NotFound from "../pages/NotFound";
 import { useContext } from "react";
-import { LoginContext } from "../App";
+import { AuthContext } from "../App";
+import PageLayout from "../layouts/PageLayout";
+import AuthLayout from "../layouts/AuthLayout";
+import PageFinishShop from "../pages/PageFinishShop";
 
-export const Ways = () => {
-  const { logado } = useContext(LoginContext);
+const Ways = () => {
+  const { isLoggeg } = useContext(AuthContext);
 
   return (
     <BrowserRouter>
       <Routes>
-        {logado ? (
-          <Route path="/" element={<Home />} />
+        {isLoggeg ? (
+          <Route path="/" element={<PageLayout />}>
+            <Route index element={<PageHome />} />
+            <Route path="/conclusao-de-compra" element={<PageFinishShop />} />
+          </Route>
         ) : (
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<AuthLayout />}>
+            <Route index element={<PageLogin />} />
+          </Route>
         )}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
 };
+
+export default Ways;

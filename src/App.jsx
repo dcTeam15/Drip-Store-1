@@ -1,7 +1,7 @@
-import Ways from "./services"
 import { useEffect } from "react";
 import { createContext } from "react"
 import { useState } from "react";
+import Ways from "./routes";
 
 export const AuthContext = createContext(null);
 
@@ -10,6 +10,7 @@ const App = () => {
   const [isLoggeg, setIsLoggeg] = useState(false);
 
   function checkLogin(){
+    // sessionStorage.setItem('isLoggeg', 'false');
     setIsLoggeg(JSON.parse(sessionStorage.getItem('isLoggeg')) || true);
   }
 
