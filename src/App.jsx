@@ -7,7 +7,7 @@ export const AuthContext = createContext(null);
 
 const App = () => {
 
-  const [isLoggeg, setIsLoggeg] = useState(false);
+  const [isLoggeg, setIsLoggeg] = useState(true);
 
   function checkLogin(){
     setIsLoggeg(JSON.parse(sessionStorage.getItem('isLoggeg')) || false);

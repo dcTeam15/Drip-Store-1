@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import { AuthContext } from '../App';
 import AuthLayout from '../layouts/AuthLayout';
 import PageHome from '../pages/PageHome';
+import PageLogin from '../pages/PageLogin';
 
 const Ways = () => {
 
@@ -16,11 +17,10 @@ const Ways = () => {
                     isLoggeg ? (
                         <Route path='/' element={<PageLayout />}>
                             <Route index element={<PageHome />} />
-                            <Route path='/notifications' element={<PageHome />} />
                         </Route>
                     ) : (
                         <Route path='/' element={<AuthLayout />}>
-                            <Route index element={<Login />} />
+                            <Route index element={<PageLogin />} />
                         </Route>
                     )
                 }
