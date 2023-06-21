@@ -1,6 +1,7 @@
 .container *{
     margin:0;
     padding: 0;
+    box-sizing: border-box;
 }
 .container {
     width: 292px;
@@ -24,8 +25,6 @@
     top: 0;
     left: 0;
     margin: 20px;
-    width: 96px;
-    height: 32px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,6 +1,7 @@
 import React from "react";
 import './style.css'
-import Produto from '../../assets/Images/Produtos/Tenis6.png'
+
+import Produto from '../../assets/Images/Produtos/Tenis7.png'
 
 const ProdutoCard = () => {
     return (
@@ -10,7 +11,7 @@ const ProdutoCard = () => {
                     30% OFF
                 </span>
                 <img src={Produto} alt="..." />
-            </div>  
+            </div>
             <h3>Tênis</h3>
             <h2>K-Swiss V8 - Masculino</h2>
             <div className="box-desconto">
