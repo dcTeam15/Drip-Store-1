@@ -1,12 +1,17 @@
-.container *{
-    margin:0;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+.container * {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif !important;
 }
+
 .container {
     width: 292px;
     height: 439px;
-    border: 2px solid black;
+    margin: 10px;
+    /* border: 2px solid black; */
 }
 
 /* section 1 */
@@ -17,7 +22,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 4px;
     box-shadow: 6px 16px 30px rgba(105, 98, 98, 0.05);
+    background: #ffffff;
 }
 
 .container>.box-image>span {
@@ -43,19 +50,26 @@
 
 /* section 2 */
 .container>h3 {
+    margin-top: 18px;
     font-size: 12px;
     font-weight: 700;
+    color: #8F8F8F;
 }
 
 .container>h2 {
+    margin: 5px 0;
     font-size: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     font-weight: 400;
+    color: #474747;
 }
 
 /* section 3 */
 .container>.box-desconto {
     display: flex;
-    gap: 5px;
+    gap: 10px;
 }
 
 .container>.box-desconto>h3:first-of-type,
@@ -67,4 +81,6 @@
 
 .container>.box-desconto>h3:last-of-type {
     font-weight: 700;
+    text-decoration: none;
+    color: #1F1F1F;
 }

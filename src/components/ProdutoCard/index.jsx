@@ -1,22 +1,34 @@
 import React from "react";
 import './style.css'
 
-import Produto from '../../assets/Images/Produtos/Tenis7.png'
 
-const ProdutoCard = () => {
+
+const ProdutoCard = ({ titulo, descricao, valor, desconto, imagem }) => {
+
+    const descontoProduto = valor - (valor * desconto / 100)
+
     return (
         <div className="container">
             <div className="box-image">
-                <span>
-                    30% OFF
-                </span>
-                <img src={Produto} alt="..." />
+                {
+                    desconto ? (
+                        <span>
+                            {desconto}% OFF
+                        </span>
+                    ) : null
+                }
+                <img src={imagem ? imagem : 'https://www.foxchapelpublishing.com/media/catalog/product/placeholder/default/image_not_available_1_1.png'} alt="..." />
             </div>
-            <h3>Tênis</h3>
-            <h2>K-Swiss V8 - Masculino</h2>
+            <h3>{titulo ? titulo : 'Titulo do Produto'}</h3>
+            <h2>{descricao ? descricao : 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam quidem alias itaque dolores iure aliquam illum modi sequi iste, nobis et amet facere deleniti rem delectus repellat non molestias id!'}
+            </h2>
             <div className="box-desconto">
-                <h3>$200</h3>
-                <h3>$100</h3>
+                <h3>${valor ? valor : 100}</h3>
+                {
+                    desconto ? (
+                        <h3>${descontoProduto ? descontoProduto : 100}</h3>
+                    ) : null
+                }
             </div>
         </div>
     );
