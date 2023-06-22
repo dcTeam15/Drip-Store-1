@@ -1,0 +1,58 @@
+.image {
+    position: absolute;
+    width: 792.19px;
+    height: 466.13px;
+    left: 554.3px;
+    top: 482.66px;
+    background: url(White-Sneakers-PNG-Clipart.png);
+    filter: drop-shadow(0px 4.32px 27px rgba(119, 15, 21, 0.08));
+    transform: rotate(-19.34deg);
+}
+
+
+.titulo {
+    position: absolute;
+    width: 550.8px;
+    height: 142.56px;
+    left: 108px;
+    top: 390.96px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 69.12px;
+    line-height: 71px;
+    letter-spacing: 1.08px;
+    color: #1F1F1F;
+}
+
+.desc {
+    position: absolute;
+    width: 302px;
+    height: 26px;
+    left: 108px;
+    top: 343.44px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17.28px;
+    line-height: 26px;
+    letter-spacing: 0.81px;
+    color: #C92071;
+}
+
+.name {
+    position: absolute;
+    width: 534.6px;
+    height: 74px;
+    left: 108px;
+    top: 555.12px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19.44px;
+    line-height: 37px;
+    letter-spacing: 0.81px;
+    color: #474747;
+}
+
+

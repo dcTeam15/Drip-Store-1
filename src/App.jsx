@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { createContext } from "react"
 import { useState } from "react";
+import Header from "./components/Header";
 import Ways from "./routes";
 
 
@@ -22,7 +23,8 @@ const App = () => {
   return (
     <>
       <AuthContext.Provider value={{isLoggeg, setIsLoggeg}}>
-
+      <Header/>
+ 
         <Ways />
       </AuthContext.Provider>
     </>
