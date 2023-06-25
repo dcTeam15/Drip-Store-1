@@ -5,9 +5,9 @@ import Header from '../../components/Header';
 const PageLayout = () => {
     return(
         <>
-            <Header />
+            {/* <Header />
             <Outlet />
-            <Footer />
+            <Footer /> */}
         </>
     )
 }

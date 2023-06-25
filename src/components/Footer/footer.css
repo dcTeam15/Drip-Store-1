@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family= Inter:wght@200;300;400;600 & display =swap');
+
+footer{
+    background-color: #1f1f1f;
+}
+
+.content{
+    display: flex;
+    margin-left: 90px;
+    margin-right: 90px;
+    padding-top: 50px;
+    justify-content: space-between;
+     gap: 16px;
+}
+
+
+.about{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #ffffff;
+}
+
+
+.dclogo{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 34px;
+}
+
+
+.social-midia ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 26px;
+    list-style: none; 
+    margin-left: -45px;
+}
+
+.dclogo h1{
+    
+    font-size: 34px;
+}
+
+
+.descrition{
+     width: 300px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: -25px;
+}
+
+
+.item{
+    display: flex;
+    gap: 130px;
+}
+
+
+.info{
+    line-height: 20px;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-style: normal;
+    padding-bottom: 34px;
+}
+
+
+.Category{
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+}
+
+
+
+.contact{
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+}
+
+
+
+.local{
+    width: 231px;
+}
+
+
+.copiryght{
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.title{
+    font-size: 18px;
+    padding-top: 28px;
+}
+
+
+
+.linha{
+    color: #ffffff;
+    width: 88%;
+    margin: 0 auto;
+}
+
+
+.text:hover{
+    cursor: pointer;
+}
+
+
+.social-midia{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
