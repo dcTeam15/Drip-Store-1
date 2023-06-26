@@ -4,17 +4,17 @@ import styled from "styled-components";
 const CardDestaque = (props) => {
   return (
     <Card>
-      <div>
+      <CardContainer>
         <CardDiscount>
-            {props.cardDestaqueDiscount}
-          </CardDiscount>
-          <CardTitle>
-            {props.cardDestaqueTitle}
-          </CardTitle>
-          <CardButton onClick={props.cardClick}>
-            {props.cardButtonLabel}
-          </CardButton>
-      </div>
+          {props.cardDestaqueDiscount}
+        </CardDiscount>
+        <CardTitle>
+          {props.cardDestaqueTitle}
+        </CardTitle>
+        <CardButton onClick={props.cardClick}>
+          {props.cardButtonLabel}
+        </CardButton>
+      </CardContainer>
         <CardImage src={props.cardImage} alt={props.cardImageAlternativeText} />
     </Card>
   )
@@ -27,7 +27,17 @@ const Card = styled.div`
   width: 100%;
   padding: 1.8rem 0 0 1.8rem;
   border-radius: 8px;
+  @media screen and (max-width: 768px) {
+      flex-direction: column;
+  }
 `;
+
+const CardContainer = styled.div`
+  @media screen and (max-width: 768px) {
+    position: absolute;
+  }
+
+`
 
 const CardDiscount = styled.div`
   font-size: 14px;

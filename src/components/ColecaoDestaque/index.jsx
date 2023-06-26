@@ -46,7 +46,7 @@ const ColecaoDestaque = (props) => {
       {props.typeModeCollection === "icons" ? (
         <>
           <CardTitle className="center">{props.title}</CardTitle>
-          <CardContainer className="IconContainer ">
+          <IconsContainer className="IconContainer">
             <CardIconsDestaque 
               iconTitle="Camisas"
               iconImage={calcaIcon}
@@ -72,7 +72,7 @@ const ColecaoDestaque = (props) => {
               iconImage={calcaIcon}
               iconAlternativeText="Icone de uma camisa"
             />
-          </CardContainer>
+          </IconsContainer>
         </>
       ) : null}
     </Container>
@@ -90,6 +90,24 @@ const Container = styled.section`
       align-items: center;
       margin-top: 6rem;
     }
+
+    @media screen and (max-width: 768px) {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      margin-top: 0;
+      &.IconsContainer{
+      justify-content: center;
+      margin-top: 0rem;
+    }
+    }
+
+    @media screen and (max-width: 450px) {
+      &.IconsContainer{
+      justify-content: center;
+      margin-top: 0rem;
+    }
+    }
+    
   `
 
 const CardContainer = styled.section`
@@ -100,7 +118,35 @@ const CardContainer = styled.section`
     gap: 0rem;
     width: 50%;
   }
-  `;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 450px) {
+    flex-direction: column;
+    width: 100%;
+  }
+`;
+
+const IconsContainer = styled.section`
+  display: flex;
+  height: 100%;
+  gap: 1rem;
+  &.IconContainer{
+    gap: 0rem;
+    width: 50%;
+  }
+
+  @media screen and (max-width: 768px) {
+    
+  }
+
+  @media screen and (max-width: 450px) {
+    width: 100%;
+
+  }
+`;
 
 const CardTitle = styled.h4`
     &.center{

@@ -22,14 +22,17 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
+    @media screen and (max-width: 768px) {
+        
+    }
+
 `;
 
 const ContainerIcon = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: #eeeeee;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eeeeee;
     padding: 0.5rem;
     box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.05);
     border-radius: 150px;
