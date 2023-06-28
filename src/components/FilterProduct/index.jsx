@@ -3,17 +3,37 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import styled from "styled-components";
 import { Radio } from "@mui/material";
-
+import {useFilter } from '../../hooks/useFilter'
 export default function CheckboxLabels() {
+  const {
+    checkedItems,
+    radioValor,
+    handleCheckboxChange,
+    handleRadioChange,
+  } = useFilter();
+
+  // const [radioValue, setRadioValue] = React.useState("");
+
+  // const handleRadioClick = (value) => {
+  //   if (radioValue === value) {
+  //     setRadioValue("");
+  //   } else {
+  //     setRadioValue(value);
+  //   }
+  // };
+ console.log(checkedItems)
   return (
     <FilterGroupContainer>
-      <Title>Filtrar por:</Title>
+      <Title>Filtrar por</Title>
       <Line />
       <StyleMarkaContainer>
         <TitleMarka>Marca</TitleMarka>
         <FormControlLabel
           control={
             <Checkbox
+             checked={checkedItems["Adiddas"] || false}
+              onChange={handleCheckboxChange}
+              name="Adiddas"
               sx={{
                 transform: "scale(0.99)",
                 "&.Mui-checked": { color: "#C92071" },
@@ -26,6 +46,9 @@ export default function CheckboxLabels() {
         <FormControlLabel
           control={
             <Checkbox
+            checked={checkedItems["Calenciaga"] || false}
+            onChange={handleCheckboxChange}
+            name="Calenciaga"
               sx={{
                 transform: "scale(0.99)",
                 "&.Mui-checked": { color: "#C92071" },
@@ -38,6 +61,9 @@ export default function CheckboxLabels() {
         <FormControlLabel
           control={
             <Checkbox
+            checked={checkedItems["K-Swiss"] || false}
+            onChange={handleCheckboxChange}
+            name="K-Swiss"
               sx={{
                 transform: "scale(0.99)",
                 "&.Mui-checked": { color: "#C92071" },
@@ -50,6 +76,9 @@ export default function CheckboxLabels() {
         <FormControlLabel
           control={
             <Checkbox
+            checked={checkedItems["Nike"] || false}
+            onChange={handleCheckboxChange}
+            name="Nike"
               sx={{
                 transform: "scale(0.99)",
                 "&.Mui-checked": { color: "#C92071" },
@@ -62,6 +91,9 @@ export default function CheckboxLabels() {
         <FormControlLabel
           control={
             <Checkbox
+            checked={checkedItems["Puma"] || false}
+            onChange={handleCheckboxChange}
+            name="Puma"
               sx={{
                 transform: "scale(0.99)",
                 "&.Mui-checked": { color: "#C92071" },
@@ -78,6 +110,9 @@ export default function CheckboxLabels() {
         <FormControlLabel
           control={
             <Checkbox
+            checked={checkedItems["Esporte e lazer"] || false}
+            onChange={handleCheckboxChange}
+            name="Esporte e lazer"
               sx={{
                 transform: "scale(0.99)",
                 "&.Mui-checked": { color: "#C92071" },
@@ -90,6 +125,9 @@ export default function CheckboxLabels() {
         <FormControlLabel
           control={
             <Checkbox
+            checked={checkedItems["Casual"] || false}
+            onChange={handleCheckboxChange}
+            name="Casual"
               sx={{
                 transform: "scale(0.99)",
                 "&.Mui-checked": { color: "#C92071" },
@@ -102,6 +140,9 @@ export default function CheckboxLabels() {
         <FormControlLabel
           control={
             <Checkbox
+            checked={checkedItems["Utilitário"] || false}
+            onChange={handleCheckboxChange}
+            name="Utilitário"
               sx={{
                 transform: "scale(0.99)",
                 "&.Mui-checked": { color: "#C92071" },
@@ -114,6 +155,9 @@ export default function CheckboxLabels() {
         <FormControlLabel
           control={
             <Checkbox
+            checked={checkedItems["Corrida"] || false}
+            onChange={handleCheckboxChange}
+            name="Corrida"
               sx={{
                 transform: "scale(0.99)",
                 "&.Mui-checked": { color: "#C92071" },
@@ -130,6 +174,9 @@ export default function CheckboxLabels() {
         <FormControlLabel
           control={
             <Checkbox
+            checked={checkedItems["Masculino"] || false}
+            onChange={handleCheckboxChange}
+            name="Masculino"
               sx={{
                 transform: "scale(0.99)",
                 "&.Mui-checked": { color: "#C92071" },
@@ -142,6 +189,9 @@ export default function CheckboxLabels() {
         <FormControlLabel
           control={
             <Checkbox
+            checked={checkedItems["Feminino"] || false}
+            onChange={handleCheckboxChange}
+            name="Feminino"
               sx={{
                 transform: "scale(0.99)",
                 "&.Mui-checked": { color: "#C92071" },
@@ -154,6 +204,9 @@ export default function CheckboxLabels() {
         <FormControlLabel
           control={
             <Checkbox
+            checked={checkedItems["Unisex"] || false}
+            onChange={handleCheckboxChange}
+            name="Unisex"
               sx={{
                 transform: "scale(0.99)",
                 "&.Mui-checked": { color: "#C92071" },
@@ -168,13 +221,25 @@ export default function CheckboxLabels() {
         <TitleEstado>Estado</TitleEstado>
         <FormControlLabel
           value="male"
-          control={<Radio sx={{"&.Mui-checked": { color: "#C92071" }}}/>}
+          control={
+            <Radio
+              // checked={radioValue === "male"}
+              // onClick={() => handleRadioClick("male")}
+              sx={{ "&.Mui-checked": { color: "#C92071" } }}
+            />
+          }
           label="Novo"
           sx={{ height: "22px", width: "77px" }}
         />
         <FormControlLabel
           value="other"
-          control={<Radio sx={{"&.Mui-checked": { color: "#C92071" }}}/>}
+          control={
+            <Radio
+              // checked={radioValue === "other"}
+              // onClick={() => handleRadioClick("other")}
+              sx={{ "&.Mui-checked": { color: "#C92071" } }}
+            />
+          }
           label="Usado"
           sx={{ height: "22px", width: "77px" }}
         />
@@ -189,11 +254,14 @@ const FilterGroupContainer = styled.div`
   padding: 20px;
   margin: 20px;
   gap: 5px;
-  width: 308px;
-  height: 720px;
+  width: 270px;
+  height: 700px;
   background: #ffffff;
   border-radius: 4px;
-  overflow-y: auto;
+  border: 2px solid darkgray;
+  @media (max-width: 375px) {
+    display: none;
+  }
 `;
 
 const Title = styled.h3`
@@ -215,6 +283,7 @@ const Line = styled.hr`
 const StyleMarkaContainer = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 3px;
 `;
 const TitleMarka = styled.h4`
   width: 46px;
@@ -222,7 +291,7 @@ const TitleMarka = styled.h4`
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 22px;
   letter-spacing: 0.75px;
   color: #474747;
@@ -230,6 +299,7 @@ const TitleMarka = styled.h4`
 const StyleCategoriaContainer = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 3px;
 `;
 const TitleCategoria = styled.h4`
   width: 46px;
@@ -237,13 +307,14 @@ const TitleCategoria = styled.h4`
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 22px;
   letter-spacing: 0.75px;
 `;
 const StyleGêneroContainer = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 3px;
 `;
 const TitleGênero = styled.h4`
   width: 46px;
@@ -251,14 +322,14 @@ const TitleGênero = styled.h4`
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 22px;
   letter-spacing: 0.75px;
 `;
 const StyleEstadoContainer = styled.div`
   display: flex;
   flex-direction: column;
- 
+  gap: 3px;
 `;
 const TitleEstado = styled.h4`
   width: 46px;
@@ -266,7 +337,7 @@ const TitleEstado = styled.h4`
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 22px;
   letter-spacing: 0.75px;
 `;
