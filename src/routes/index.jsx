@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PageHome from "../pages/PageHome";
 import PageLogin from "../pages/PageLogin";
+import PageProdutos from "../pages/PageProdutos";
 import NotFound from "../pages/NotFound";
 import { useContext } from "react";
 import { AuthContext } from "../App";
@@ -17,6 +18,7 @@ const Ways = () => {
         {isLoggeg ? (
           <Route path="/" element={<PageLayout />}>
             <Route index element={<PageHome />} />
+            <Route path="/produtos" element={<PageProdutos />} />
             <Route path="/conclusao-de-compra" element={<PageFinishShop />} />
           </Route>
         ) : (
