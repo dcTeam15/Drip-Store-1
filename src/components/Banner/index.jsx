@@ -19,13 +19,11 @@ export const Banner = () => {
             image:`${Image2}`,
             description: "Melhores ofertas personalizadas",
             name: "Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur."
-            
         },
         {
             image:`${Image3}`,
             description: "Melhores ofertas personalizadas",
             name: "Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur."
-            
         }
     ];
 
