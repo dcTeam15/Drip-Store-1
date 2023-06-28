@@ -23,8 +23,6 @@ const App = () => {
   return (
     <>
       <AuthContext.Provider value={{isLoggeg, setIsLoggeg}}>
-      <Header/>
- 
         <Ways />
       </AuthContext.Provider>
     </>
