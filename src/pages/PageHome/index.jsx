@@ -7,9 +7,9 @@ const PageHome = () => {
     return(
         <>
             <h1>Home</h1>
-            <ColecaoDestaque typeModeCollection="cards"/>
-            <ColecaoDestaque typeModeCollection="icons"/>
-            {/* <Banner/> */}
+            <Banner/>
+            <ColecaoDestaque typeModeCollection="cards" title="Coleção Destaque"/>
+            <ColecaoDestaque typeModeCollection="icons" title="Coleção Destaque"/>
         </>
     );
 }

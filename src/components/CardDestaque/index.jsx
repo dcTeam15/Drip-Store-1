@@ -29,6 +29,7 @@ const Card = styled.div`
   border-radius: 8px;
   @media screen and (max-width: 768px) {
       flex-direction: column;
+      padding: 1rem 0 0 1rem;
   }
 `;
 

@@ -6,7 +6,7 @@ import CardIconsDestaque from "../CardIconsDestaque";
 import supremeStarWars from "../../assets/star-wars-storm-trooper-supreme-shirts-supreme-t-shirt-snoopy-clothing-apparel-t-shirt-text-transparent-png-616696 1.png";
 import tenisAdidas from "../../assets/ddd 1.png";
 import fonesBeats from "../../assets/d9db11953a2d185d37246bb1f500c957 1.png";
-import calcaIcon from "../../assets/Vector.svg"
+import calcaIcon from "../../assets/Vector.svg";
 
 const ColecaoDestaque = (props) => {
   return (
@@ -47,31 +47,31 @@ const ColecaoDestaque = (props) => {
         <>
           <CardTitle className="center">{props.title}</CardTitle>
           <IconsContainer className="IconContainer">
-            <CardIconsDestaque 
-              iconTitle="Camisas"
-              iconImage={calcaIcon}
-              iconAlternativeText="Icone de uma camisa"
-            />
-            <CardIconsDestaque 
-              iconTitle="Camisas"
-              iconImage={calcaIcon}
-              iconAlternativeText="Icone de uma camisa"
-            />
-            <CardIconsDestaque 
-              iconTitle="Camisas"
-              iconImage={calcaIcon}
-              iconAlternativeText="Icone de uma camisa"
-            />
-            <CardIconsDestaque 
-              iconTitle="Camisas"
-              iconImage={calcaIcon}
-              iconAlternativeText="Icone de uma camisa"
-            />
-            <CardIconsDestaque 
-              iconTitle="Camisas"
-              iconImage={calcaIcon}
-              iconAlternativeText="Icone de uma camisa"
-            />
+              <CardIconsDestaque 
+                iconTitle="Camisas"
+                iconImage={calcaIcon}
+                iconAlternativeText="Icone de uma camisa"
+              />
+              <CardIconsDestaque 
+                iconTitle="Camisas"
+                iconImage={calcaIcon}
+                iconAlternativeText="Icone de uma camisa"
+              />
+              <CardIconsDestaque 
+                iconTitle="Camisas"
+                iconImage={calcaIcon}
+                iconAlternativeText="Icone de uma camisa"
+              />
+              <CardIconsDestaque 
+                iconTitle="Camisas"
+                iconImage={calcaIcon}
+                iconAlternativeText="Icone de uma camisa"
+              />
+              <CardIconsDestaque 
+                iconTitle="Camisas"
+                iconImage={calcaIcon}
+                iconAlternativeText="Icone de uma camisa"
+              />
           </IconsContainer>
         </>
       ) : null}
@@ -82,8 +82,7 @@ const ColecaoDestaque = (props) => {
 const Container = styled.section`
     display: flex;
     flex-direction: column;
-    margin-left: 6rem;
-    margin-right: 6rem;
+    margin: 1.5rem 1rem 1rem 1rem;
     height: 100%;
     &.IconsContainer{
       justify-content: center;
@@ -92,19 +91,20 @@ const Container = styled.section`
     }
 
     @media screen and (max-width: 768px) {
-      margin-left: 1rem;
-      margin-right: 1rem;
-      margin-top: 0;
+      margin: 1.5rem 1rem 1rem 1rem;
+      justify-content: center;
       &.IconsContainer{
       justify-content: center;
-      margin-top: 0rem;
+      align-items: start;
     }
     }
 
     @media screen and (max-width: 450px) {
+      margin: 1.5rem 1rem 1rem 1rem;
       &.IconsContainer{
       justify-content: center;
       margin-top: 0rem;
+      overflow-x: auto;
     }
     }
     
@@ -121,6 +121,7 @@ const CardContainer = styled.section`
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    width: 100%;
   }
 
   @media screen and (max-width: 450px) {
@@ -135,7 +136,7 @@ const IconsContainer = styled.section`
   gap: 1rem;
   &.IconContainer{
     gap: 0rem;
-    width: 50%;
+    width: 100%;
   }
 
   @media screen and (max-width: 768px) {
