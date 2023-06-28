@@ -27,16 +27,10 @@ footer{
     align-items: center;
     gap: 8px;
     padding-bottom: 34px;
+  
 }
 
 
-.social-midia ul{
-    display: flex;
-    justify-content: space-between;
-    gap: 26px;
-    list-style: none; 
-    margin-left: -45px;
-}
 
 .dclogo h1{
     
@@ -118,6 +112,8 @@ footer{
 
 .text:hover{
     cursor: pointer;
+    color: palevioletred;
+    padding-left: 10px;
 }
 
 
@@ -126,3 +122,40 @@ footer{
     align-items: center;
     justify-content: space-between;
 }
+
+
+.social-midia ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 26px;
+    list-style: none; 
+    margin-left: -45px;
+}
+
+.social-midia ul:hover{
+    cursor: pointer;
+
+}
+
+@media screen and (max-width:760px){
+
+
+
+
+}
+
+@media screen and (max-width:600px){
+
+
+
+}
+
+
+
+
+
+
+
+
+
+

@@ -49,7 +49,7 @@ const Footer = () => {
               <p className="text">Calças</p>
               <p className="text">Bonés</p>
               <p className="text">Headphones</p>
-              <p className="text">Tenis</p>             
+              <p className="text">Tênis</p>             
             </div>        
           </div>
 
